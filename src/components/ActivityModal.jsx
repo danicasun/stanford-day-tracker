@@ -9,6 +9,7 @@ const CATEGORIES = [
   { name: 'Eating', color: '#ea580c', text: '#fff' },
   { name: 'Social Event', color: '#db2777', text: '#fff' },
   { name: 'Exercise', color: '#16a34a', text: '#fff' },
+  { name: 'Stanford Athletics / Practice', color: '#8C1515', text: '#fff' },
   { name: 'Work / Research', color: '#7c3aed', text: '#fff' },
   { name: 'Clubs / Professional Events', color: '#ca8a04', text: '#fff' },
   { name: 'Transit / Commute', color: '#6b7280', text: '#fff' },

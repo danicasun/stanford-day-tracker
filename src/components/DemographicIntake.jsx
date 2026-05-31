@@ -5,13 +5,18 @@ import './DemographicIntake.css';
 const YEAR_OPTIONS = ['Freshman', 'Sophomore', 'Junior', 'Senior', 'Grad', 'Other'];
 const ATHLETE_OPTIONS = ['Yes', 'No'];
 
-// Compute yesterday's date as the default
+function localDateString(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, '0');
+  const d = String(date.getDate()).padStart(2, '0');
+  return `${y}-${m}-${d}`;
+}
+
 const yesterday = new Date();
 yesterday.setDate(yesterday.getDate() - 1);
-const DEFAULT_DATE = yesterday.toISOString().split('T')[0];
+const DEFAULT_DATE = localDateString(yesterday);
 
-// Today's date string — used to cap the date picker
-const today = new Date().toISOString().split('T')[0];
+const today = localDateString(new Date());
 
 export function DemographicIntake({ onComplete }) {
   const [year, setYear] = useState('');
