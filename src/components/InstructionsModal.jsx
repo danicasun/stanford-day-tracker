@@ -17,10 +17,9 @@ const CATEGORY_GUIDE = [
 ];
 
 const TIPS = [
-  'Log yesterday or the day before — not a "typical day" off the top of your head. It\'s easier to remember and more accurate.',
+  'Log yesterday or the day before, not a "typical day" off the top of your head.',
   'Do your best guess on start and end times, it doesn\'t need to be exact.',
-  'Every block of time counts, even a 30-minute shower or commute.',
-  'Try to cover your full 24 hours as best you can.',
+  'Every unique activity counts, even a 30-minute shower or commute.',
 ];
 
 export function InstructionsModal({ onClose }) {
