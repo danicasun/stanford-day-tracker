@@ -176,7 +176,7 @@ export default function App() {
 
               <button
                 className="btn-submit"
-                onClick={handleSubmit}
+                onClick={() => handleSubmit()}
                 disabled={isSubmitting || blocks.length === 0}
               >
                 {isSubmitting ? 'Submitting…' : 'Submit my day →'}
