@@ -18,7 +18,7 @@ export const CATEGORY_MAP = Object.fromEntries(
   CATEGORIES.map(c => [c.name, c])
 );
 
-export const SLOT_HEIGHT = 8; // px per 5-min slot
+export const SLOT_HEIGHT = 4; // px per 5-min slot
 export const SLOT_DURATION = 5; // minutes
 export const TIMELINE_START_HOUR = 6; // 6:00 AM
 export const NUM_SLOTS = 288; // 6:00 AM to 6:00 AM next day (24 hours)
