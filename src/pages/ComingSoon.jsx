@@ -4,6 +4,7 @@ export default function ComingSoon() {
       <div style={styles.content}>
         <p style={styles.name}>danica sun</p>
         <p style={styles.message}>check back soon</p>
+        <a href="/dayinthelife" style={styles.link}>stanford day in the life →</a>
       </div>
     </div>
   );
@@ -39,5 +40,16 @@ const styles = {
     fontWeight: '400',
     letterSpacing: '0.08em',
     color: '#000',
+  },
+  link: {
+    marginTop: '8px',
+    fontSize: '12px',
+    fontWeight: '500',
+    letterSpacing: '0.06em',
+    color: '#000',
+    textDecoration: 'none',
+    borderBottom: '1px solid #000',
+    paddingBottom: '1px',
+    transition: 'opacity 0.15s',
   },
 };
