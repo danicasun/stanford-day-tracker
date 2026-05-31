@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { DemographicIntake } from './components/DemographicIntake';
 import { Timeline } from './components/Timeline';
 import { ActivityModal } from './components/ActivityModal';
+import { InstructionsModal } from './components/InstructionsModal';
 import { SuccessScreen } from './components/SuccessScreen';
 import { generateId, totalLoggedMinutes } from './utils/helpers';
 import { submitToAirtable, buildPayload } from './utils/airtable';
@@ -30,6 +31,7 @@ export default function App() {
   const [blocks, setBlocks] = useState([]);
   const [studentId] = useState(() => generateId());
   const [modalBlock, setModalBlock] = useState(null);
+  const [showInstructions, setShowInstructions] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorPayload, setErrorPayload] = useState(null);
   const [submitWarning, setSubmitWarning] = useState(null);
@@ -52,6 +54,7 @@ export default function App() {
   const handleIntakeComplete = useCallback((demo) => {
     setDemographics(demo);
     setScreen('timeline');
+    setShowInstructions(true);
   }, []);
 
   const handleBlockClick = useCallback((block) => {
@@ -139,7 +142,10 @@ export default function App() {
         <div className="app-header-inner">
           <h1 className="app-title">Stanford Day in the Life</h1>
           {screen === 'timeline' && (
-            <button className="btn-ghost" onClick={handleReset}>Start over</button>
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              <button className="btn-ghost" onClick={() => setShowInstructions(true)}>How to log</button>
+              <button className="btn-ghost" onClick={handleReset}>Start over</button>
+            </div>
           )}
         </div>
       </header>
@@ -202,6 +208,10 @@ export default function App() {
           onDelete={handleModalDelete}
           onClose={handleModalClose}
         />
+      )}
+
+      {showInstructions && (
+        <InstructionsModal onClose={() => setShowInstructions(false)} />
       )}
     </div>
   );
