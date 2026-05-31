@@ -1,0 +1,137 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 400px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.modal-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.modal-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.modal-category-pill {
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  border: 2px solid transparent;
+  text-align: center;
+  line-height: 1.3;
+  transition: opacity 0.1s;
+}
+
+.modal-category-pill:hover {
+  opacity: 0.85;
+}
+
+.modal-category-pill.selected {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.modal-note-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #111;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.modal-note-input:focus {
+  border-color: #8C1515;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Shared button base */
+.modal-btn-save,
+.modal-btn-cancel,
+.modal-btn-delete {
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+.modal-btn-save {
+  background: #8C1515;
+  color: #fff;
+  border-color: #8C1515;
+}
+
+.modal-btn-save:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.modal-btn-save:not(:disabled):hover {
+  opacity: 0.88;
+}
+
+.modal-btn-cancel {
+  background: #fff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+.modal-btn-cancel:hover {
+  background: #f3f4f6;
+}
+
+/* Delete sits on the left — push it away from Cancel/Save */
+.modal-btn-delete {
+  background: #fff;
+  color: #dc2626;
+  border-color: #dc2626;
+  margin-right: auto;
+}
+
+.modal-btn-delete:hover {
+  background: #fef2f2;
+}

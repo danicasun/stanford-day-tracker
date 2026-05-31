@@ -1,0 +1,192 @@
+/* DemographicIntake.css */
+
+.intake-card {
+  background: #ffffff;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10), 0 1px 4px rgba(0, 0, 0, 0.06);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.intake-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #8C1515;
+  margin: 0 0 6px 0;
+}
+
+.intake-section-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.intake-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 24px 0;
+  line-height: 1.5;
+}
+
+.intake-field {
+  margin-bottom: 20px;
+}
+
+.intake-label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* Pill / chip selectors */
+.pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  border: 2px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  background: #ffffff;
+  color: #374151;
+  font-family: inherit;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+  user-select: none;
+}
+
+.pill:hover:not(.selected) {
+  border-color: #8C1515;
+  color: #8C1515;
+}
+
+.pill.selected {
+  background: #8C1515;
+  border-color: #8C1515;
+  color: #ffffff;
+}
+
+/* Searchable dropdown */
+.intake-dropdown-wrapper {
+  position: relative;
+}
+
+.intake-input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #111827;
+  background: #ffffff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.intake-input:focus {
+  border-color: #8C1515;
+  box-shadow: 0 0 0 3px rgba(140, 21, 21, 0.1);
+}
+
+.intake-input:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.intake-dropdown-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+}
+
+.intake-dropdown-item {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: #111827;
+  transition: background 0.1s;
+}
+
+.intake-dropdown-item:hover,
+.intake-dropdown-item.focused {
+  background: #fdf2f2;
+  color: #8C1515;
+}
+
+.intake-dropdown-empty {
+  padding: 10px 12px;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.intake-dropdown-custom {
+  color: #8C1515;
+  font-weight: 500;
+  border-top: 1px solid #f3f4f6;
+}
+
+.intake-dropdown-custom:hover {
+  background: #fdf2f2;
+  color: #8C1515;
+}
+
+/* Date input */
+input[type='date'].intake-input {
+  cursor: pointer;
+}
+
+/* Submit button */
+.intake-submit {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 28px;
+  padding: 12px 24px;
+  background: #8C1515;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+  letter-spacing: 0.01em;
+}
+
+.intake-submit:hover:not(:disabled) {
+  background: #6f1010;
+}
+
+.intake-submit:disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Divider between header and fields */
+.intake-divider {
+  border: none;
+  border-top: 1px solid #f3f4f6;
+  margin: 16px 0 20px 0;
+}
