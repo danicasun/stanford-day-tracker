@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-# Environment variables — never commit secrets
+# Environment variables
 .env
 .env.*
 !.env.example
