@@ -174,28 +174,13 @@ export default function App() {
                 {loggedHours > 0 ? `${loggedHours} hrs logged` : 'No time logged yet'}
               </span>
 
-              {submitWarning === 'warn' && (
-                <div className="submit-warning">
-                  <p>Only {loggedHours} hours logged — submit anyway?</p>
-                  <div className="warning-actions">
-                    <button className="btn-secondary" onClick={() => setSubmitWarning(null)}>Keep logging</button>
-                    <button className="btn-primary" onClick={() => {
-                      setSubmitWarning('override');
-                      handleSubmit();
-                    }}>Submit anyway</button>
-                  </div>
-                </div>
-              )}
-
-              {submitWarning !== 'warn' && (
-                <button
-                  className="btn-submit"
-                  onClick={handleSubmit}
-                  disabled={isSubmitting || blocks.length === 0}
-                >
-                  {isSubmitting ? 'Submitting…' : 'Submit my day →'}
-                </button>
-              )}
+              <button
+                className="btn-submit"
+                onClick={handleSubmit}
+                disabled={isSubmitting || blocks.length === 0}
+              >
+                {isSubmitting ? 'Submitting…' : 'Submit my day →'}
+              </button>
             </div>
           </div>
         )}
@@ -212,6 +197,18 @@ export default function App() {
 
       {showInstructions && (
         <InstructionsModal onClose={() => setShowInstructions(false)} />
+      )}
+
+      {submitWarning === 'warn' && (
+        <div className="warning-overlay">
+          <div className="warning-card">
+            <p className="warning-message">Only {loggedHours} hours logged — submit anyway?</p>
+            <div className="warning-actions">
+              <button className="btn-secondary" onClick={() => setSubmitWarning(null)}>Keep logging</button>
+              <button className="btn-primary" onClick={() => { setSubmitWarning('override'); handleSubmit(); }}>Submit anyway</button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
