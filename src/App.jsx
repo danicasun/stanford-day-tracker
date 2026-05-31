@@ -77,9 +77,9 @@ export default function App() {
 
   const handleModalClose = useCallback(() => setModalBlock(null), []);
 
-  async function handleSubmit() {
+  async function handleSubmit(force = false) {
     const loggedMins = totalLoggedMinutes(blocks);
-    if (loggedMins < 360 && submitWarning !== 'override') {
+    if (!force && loggedMins < 24 * 60) {
       setSubmitWarning('warn');
       return;
     }
@@ -205,7 +205,7 @@ export default function App() {
             <p className="warning-message">Only {loggedHours} hours logged — submit anyway?</p>
             <div className="warning-actions">
               <button className="btn-secondary" onClick={() => setSubmitWarning(null)}>Keep logging</button>
-              <button className="btn-primary" onClick={() => { setSubmitWarning('override'); handleSubmit(); }}>Submit anyway</button>
+              <button className="btn-primary" onClick={() => handleSubmit(true)}>Submit anyway</button>
             </div>
           </div>
         </div>
