@@ -52,7 +52,7 @@ function fitInGap(startSlot, endSlot, blocks) {
 function TimeLabel({ slot }) {
   const top = slot * SLOT_HEIGHT;
   return (
-    <div className="timeline-label" style={{ top, transform: 'translateY(-50%)' }}>
+    <div className="timeline-label" style={{ top, transform: 'translateY(-100%)' }}>
       {slotToLabel(slot)}
     </div>
   );
