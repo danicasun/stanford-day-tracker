@@ -84,7 +84,7 @@ export function DemographicIntake({ onComplete }) {
     <div className="intake-card">
       <h1 className="intake-title">Stanford Day in the Life</h1>
       <p className="intake-subtitle">
-        This takes under 3 minutes. Tell us a little about yourself first.
+        This takes under 3 minutes. Tell us a little about yourself first. All data collected is anonymous.
       </p>
 
       <h2 className="intake-section-header">About You</h2>
@@ -211,6 +211,15 @@ export function DemographicIntake({ onComplete }) {
         >
           Start Logging My Day →
         </button>
+
+        <a
+          href="https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="intake-data-link"
+        >
+          What will my data be used for?
+        </a>
       </form>
     </div>
   );

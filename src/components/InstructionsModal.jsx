@@ -33,6 +33,7 @@ export function InstructionsModal({ onClose }) {
         <p className="instructions-intro">
           Click and drag on the timeline to create a block. Select the activity category, add an optional note, and repeat until your day is filled in.
         </p>
+        <p className="instructions-anonymous">All data collected is anonymous.</p>
 
         <h3 className="instructions-section-heading">Category guide</h3>
         <ul className="instructions-category-list">
@@ -51,6 +52,15 @@ export function InstructionsModal({ onClose }) {
             <li key={i}>{tip}</li>
           ))}
         </ul>
+
+        <a
+          href="https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="instructions-data-link"
+        >
+          What will my data be used for?
+        </a>
 
         <button className="instructions-got-it" onClick={onClose}>Got it →</button>
       </div>

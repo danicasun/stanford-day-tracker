@@ -54,6 +54,13 @@
   line-height: 1.6;
 }
 
+.instructions-anonymous {
+  font-size: 13px;
+  color: #6b7280;
+  margin: -12px 0 22px;
+  font-style: italic;
+}
+
 .instructions-section-heading {
   font-size: 14px;
   font-weight: 700;
@@ -95,6 +102,20 @@
   font-size: 13px;
   color: #374151;
   line-height: 1.5;
+}
+
+.instructions-data-link {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 12px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.instructions-data-link:hover {
+  color: #374151;
 }
 
 .instructions-got-it {

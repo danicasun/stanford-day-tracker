@@ -184,6 +184,20 @@ input[type='date'].intake-input {
   cursor: not-allowed;
 }
 
+.intake-data-link {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 14px;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.intake-data-link:hover {
+  color: #374151;
+}
+
 /* Divider between header and fields */
 .intake-divider {
   border: none;
