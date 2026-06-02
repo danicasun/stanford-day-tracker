@@ -9,8 +9,9 @@ export const CATEGORIES = [
   { name: 'Work / Research', color: '#7c3aed', text: '#fff' },
   { name: 'Clubs / Professional Events', color: '#ca8a04', text: '#fff' },
   { name: 'Transit / Commute', color: '#6b7280', text: '#fff' },
-  { name: 'Personal / Chores', color: '#92400e', text: '#fff' },
+  { name: 'Personal Care / Chores', color: '#92400e', text: '#fff' },
   { name: 'Leisure / Entertainment', color: '#dc2626', text: '#fff' },
+  { name: 'Religion', color: '#a855f7', text: '#fff' },
   { name: 'Other', color: '#d1d5db', text: '#374151' },
 ];
 
