@@ -1,19 +1,5 @@
-const CATEGORIES = [
-  { name: 'Sleep', color: '#4338ca', text: '#fff' },
-  { name: 'Class', color: '#2563eb', text: '#fff' },
-  { name: 'Studying / Schoolwork', color: '#0d9488', text: '#fff' },
-  { name: 'Eating', color: '#ea580c', text: '#fff' },
-  { name: 'Social Event', color: '#db2777', text: '#fff' },
-  { name: 'Exercise', color: '#16a34a', text: '#fff' },
-  { name: 'Work / Research', color: '#7c3aed', text: '#fff' },
-  { name: 'Clubs / Professional Events', color: '#ca8a04', text: '#fff' },
-  { name: 'Transit / Commute', color: '#6b7280', text: '#fff' },
-  { name: 'Personal / Chores', color: '#92400e', text: '#fff' },
-  { name: 'Leisure / Entertainment', color: '#dc2626', text: '#fff' },
-  { name: 'Other', color: '#d1d5db', text: '#374151' },
-];
+import { CATEGORIES, CATEGORY_MAP } from '../utils/constants';
 
-const CATEGORY_MAP = Object.fromEntries(CATEGORIES.map((c) => [c.name, c]));
 
 function slotToDisplay(slot) {
   const totalMin = 6 * 60 + slot * 5;
