@@ -158,7 +158,7 @@ export default function App() {
         {screen === 'timeline' && (
           <div className="timeline-page">
             <p className="timeline-instructions">
-              Drag to create blocks &mdash; click a block to edit it.
+              Drag to create blocks &mdash; click a block to edit it &mdash; drag the edges of a block to adjust its times.
             </p>
 
             <div className="timeline-scroll-container">
