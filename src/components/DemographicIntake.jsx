@@ -24,7 +24,6 @@ export function DemographicIntake({ onComplete }) {
   const [majorQuery, setMajorQuery] = useState('');
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [date_logged, setDateLogged] = useState(DEFAULT_DATE);
-  const [unusualDay, setUnusualDay] = useState('');
   const [athlete, setAthlete] = useState('');
 
   const dropdownRef = useRef(null);
@@ -86,9 +85,6 @@ export function DemographicIntake({ onComplete }) {
       <p className="intake-subtitle">
         This takes under 3 minutes. Tell us a little about yourself first. All data collected is anonymous.
       </p>
-
-      <h2 className="intake-section-header">About You</h2>
-      <hr className="intake-divider" />
 
       <form onSubmit={handleSubmit} noValidate>
 
@@ -167,22 +163,6 @@ export function DemographicIntake({ onComplete }) {
             value={date_logged}
             max={today}
             onChange={e => setDateLogged(e.target.value)}
-          />
-        </div>
-
-        {/* Anything unusual (optional) */}
-        <div className="intake-field">
-          <label className="intake-label" htmlFor="unusual-input">
-            Anything unusual about your day?{' '}
-            <span style={{ fontWeight: 400, color: '#9ca3af' }}>(optional)</span>
-          </label>
-          <input
-            id="unusual-input"
-            type="text"
-            className="intake-input"
-            placeholder="e.g. finals week, sick day, holiday…"
-            value={unusualDay}
-            onChange={e => setUnusualDay(e.target.value)}
           />
         </div>
 
