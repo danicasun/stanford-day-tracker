@@ -7,8 +7,8 @@ const VALID_ATHLETE = ['Yes', 'No'];
 const VALID_ACTIVITIES = [
   'Sleep', 'Class', 'Studying / Schoolwork', 'Eating', 'Social Event',
   'Exercise', 'Stanford Athletics / Practice', 'Work / Research',
-  'Clubs / Professional Events', 'Transit / Commute', 'Personal / Chores',
-  'Leisure / Entertainment', 'Other',
+  'Clubs / Professional Events', 'Transit / Commute', 'Personal Care / Chores',
+  'Leisure / Entertainment', 'Religion', 'Other',
 ];
 
 const TIME_RE = /^([01]\d|2[0-3]):[0-5]\d$/;
