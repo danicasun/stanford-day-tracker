@@ -4,7 +4,7 @@ export default function ComingSoon() {
       <div style={styles.content}>
         <p style={styles.name}>danica sun</p>
         <p style={styles.message}>check back soon</p>
-        <a href="/dayinthelife" style={styles.link}>log your data to contribute →</a>
+        <a href="/dayinthelife" style={styles.link}>help me out! log your data →</a>
         <a href="/dayatstanford" style={styles.link}>view an average stanford student's day in the life →</a>
       </div>
     </div>
@@ -52,5 +52,6 @@ const styles = {
     borderBottom: '1px solid #000',
     paddingBottom: '1px',
     transition: 'opacity 0.15s',
+    alignSelf: 'center',
   },
 };
