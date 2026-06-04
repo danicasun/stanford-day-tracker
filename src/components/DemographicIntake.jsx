@@ -193,9 +193,7 @@ export function DemographicIntake({ onComplete }) {
         </button>
 
         <a
-          href="https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/dayatstanford"
           className="intake-data-link"
         >
           What will my data be used for?

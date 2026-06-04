@@ -53,9 +53,7 @@ export function InstructionsModal({ onClose }) {
         </ul>
 
         <a
-          href="https://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/dayatstanford"
           className="instructions-data-link"
         >
           What will my data be used for?

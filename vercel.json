@@ -1,5 +1,11 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "rewrites": [
+    {
+      "source": "/dayatstanford/:path*",
+      "destination": "https://stanforddayinthelife.vercel.app/:path*"
+    },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
