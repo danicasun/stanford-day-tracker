@@ -4,7 +4,8 @@ export default function ComingSoon() {
       <div style={styles.content}>
         <p style={styles.name}>danica sun</p>
         <p style={styles.message}>check back soon</p>
-        <a href="/dayinthelife" style={styles.link}>stanford day in the life →</a>
+        <a href="/dayinthelife" style={styles.link}>log your data to contribute →</a>
+        <a href="/dayatstanford" style={styles.link}>view an average stanford student's day in the life →</a>
       </div>
     </div>
   );
